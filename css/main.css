@@ -48,16 +48,18 @@ header ul li a:hover {
     transition-duration: 0.6s;
 }
 article {
+
     background-color: white;
     min-width: 450px;
     width: 60%;
     margin: 20px auto;
     min-height: 500px;
     padding: 1em 3em;
-    text-align: left;
+    text-align: center;
 }
-article h1 {
-    text-align: left;
+article h1:hover {
+    transition: transform .2s;
+    transform: scale(1.1,1.1);
 }
 article img {
     width: 100%;
@@ -78,4 +80,36 @@ article .author {
 article .author a {
     color: gray;
     text-decoration: none;
+}
+section p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    75% {
+        font-size: 300%;
+        margin-left: 25%;
+        width: 150%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem;
+    background-color: #00cc66;
+    text-align: center;
+    color: white;
 }
